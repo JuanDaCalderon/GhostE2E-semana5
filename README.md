@@ -26,11 +26,11 @@ https://github.com/JuanDaCalderon/GhostE2E-semana5
 3. Inicia sesion, crear un post y lo publica, lo selecciona de lista de post, le modifica title y el texto secuandario y valida que este en la lista con los valores actualizados.
 4. Inicia sesion, crear un post y lo publica, lo selecciona de lista de post, lo elimina y valida que ya no este en el listado.
 
-5. Crear page.
-6. Crear page programada.
-7. Eliminar pagina.
-8. Editar page.
-9. Filtrar pages.
+5. Crear page, Crea una página y la publica despues se valida que haya sido creada correctamente.
+6. Crear page programada, Crea una página y la programa, despues se valida que esta programada.
+7. Eliminar pagina, Se crea una página, se valida que se creo y despues se elimina, para por ultimo validar que se elimino.
+8. Editar page, Se crea una página y despues se edita la descripción de la misma.
+9. Filtrar pages, Se crean tres páginas; Publicada, Agendada, y en borrador, despues se filtrar por borradores y se valida que este filtrada.
 
 10. 
 11. 
