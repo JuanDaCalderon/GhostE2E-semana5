@@ -75,7 +75,7 @@ Desde la carpeta raiz del proyecto, `cypress_ghost`  :
 - En la consola Adicionar el proyecto. Buscar la carpeta cypress-ghost descargada del repositorio github
   <img width="938" alt="agregar proyecto" src="https://user-images.githubusercontent.com/124101392/236691524-aa3a4466-a381-4126-992b-d9f663863a85.png">
 - Ya se ve debe ver el proyecto, seleccionar cypress-ghost
-
+![image](https://user-images.githubusercontent.com/124101392/236691843-b257f1a5-0f5e-47bd-8e2f-9781e49cf96a.png)
 - Seleccionar E2E testing
 ![image](https://user-images.githubusercontent.com/124101392/236691572-a8561b8a-e8e2-4aa6-b7ec-25a44f11a4de.png)
 - Seleccionar el navegador Chrome y hacer click en el boton Start E2E Testing in Chrome
