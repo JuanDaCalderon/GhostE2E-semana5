@@ -24,7 +24,7 @@ describe('Eliminar tag', () => {
       cy.get("h3.gh-tag-list-name").contains("Tag").should('exist');
       cy.wait(2000)
       cy.contains('h3', 'Tag').click()
-      cy.wait(5000)
+      cy.wait(2000)
       cy.get('button[class="gh-btn gh-btn-red gh-btn-icon mb15"]').click()
       cy.wait(2000)
       cy.get('button[class="gh-btn gh-btn-red gh-btn-icon ember-view"]').click()
