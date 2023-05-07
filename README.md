@@ -38,11 +38,11 @@ https://github.com/JuanDaCalderon/GhostE2E-semana5
 13. 
 14. 
 15. 
-16. 
-17. 
-18. 
-19. 
-20. 
+16. inicia sesion, se va a la seccion de staff click en el boton "invite people" y se hace invitacion al usuario
+17. inicia sesion, se va a la seccion de staff click en el usuario y se edita la informacion del usuario
+18. inicia sesion, se va a la seccion de staff, se invita al usuario, se recarga la pagina y se da clik en el boton "Revoke" del usuario invitado
+19. inicia sesion, se va a la seccion de Setings en General , se da click en el boton "Expand" y se edita la informacion general de Titulo y descripcion
+20. inicia sesion, se va a la seccion de Setings en General , si da click en le boton de hacer publica o privada la pagina
 
 
 # Instrucciones para ejecutar tests - Kraken
