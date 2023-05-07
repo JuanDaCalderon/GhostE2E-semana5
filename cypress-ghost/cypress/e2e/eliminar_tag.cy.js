@@ -1,3 +1,4 @@
+import configJson from '../../config/config.json';
 describe('Eliminar tag', () => {
     it('Se elimina un tag desde el inicio de sesión hasta la finalización de la eliminación', () => {
       cy.visit(configJson.host)

@@ -1,3 +1,4 @@
+import configJson from '../../config/config.json';
 describe('Editar tag', () => {
   it('Se crea un tag desde el inicio de sesión hasta la finalización de la creación', () => {
     cy.visit(configJson.host)

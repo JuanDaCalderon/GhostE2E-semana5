@@ -1,3 +1,4 @@
+import configJson from '../../config/config.json';
 describe('Ver internal tags', () => {
     it('Se revisar la pestaña internal tags desde el inicio de sesión hasta la finalización de la creación', () => {
       cy.visit(configJson.host)
