@@ -15,7 +15,7 @@ https://github.com/JuanDaCalderon/GhostE2E-semana5
 - Post.
 - Tags.
 - Pages.
-- Sytaff
+- Staff
 - General settings
 
 ## Escenarios de pruebas. Aplican para Kraken y Cypress
