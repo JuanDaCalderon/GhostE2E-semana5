@@ -19,7 +19,7 @@ describe('Ver internal tags', () => {
       cy.wait(2000)
       cy.get('button[class="gh-btn gh-btn-blue gh-btn-icon ember-view"]').click()
       cy.wait(2000)
-      cy.get('a[href="#/tags/"][data-cypress-el="true"]').click()
+      cy.get('a[href="#/tags/"]').click()
       cy.wait(2000)
       cy.get("h3.gh-tag-list-name").contains("AAAAAAAAAA Tag prueba").should('exist');
       cy.get('section.view-actions div.gh-contentfilter button:last-child').click()

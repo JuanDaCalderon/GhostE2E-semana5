@@ -29,7 +29,7 @@ describe('Editar tag', () => {
     cy.wait(2000)
     cy.get('button[class="gh-btn gh-btn-blue gh-btn-icon ember-view"]').click()
     cy.wait(2000)
-    cy.get('a[href="#/tags/"][data-cypress-el="true"]').click()
+    cy.get('a[href="#/tags/"]').click()
     cy.wait(2000)
     cy.get("p.gh-tag-list-description").contains("edita").should('exist');
   })
