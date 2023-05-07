@@ -12,7 +12,7 @@ describe('Eliminar post ', () => {
     it('Se crea un post publicado - Se elimina el post creado - Valida que ya no este en la lista', () => {
       
         //Given I navigate to page "http://localhost:2368/ghost"  
-        cy.visit('http://localhost:2368/ghost')
+        cy.visit(configJson.host)
         cy.wait(5000)
       
         //When I enter email "<Usuario1>"

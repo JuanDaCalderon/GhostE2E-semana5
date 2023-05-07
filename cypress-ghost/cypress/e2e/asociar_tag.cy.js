@@ -1,10 +1,11 @@
+import configJson from '../../config/config.json';
 describe('Asociar tag', () => {
     it('Se asocia un tag desde el inicio de sesión hasta la finalización de la creación', () => {
-      cy.visit('http://localhost:2368/ghost')
+      cy.visit(configJson.host)
       cy.wait(2000)
-      cy.get('input[name="identification"]').type('pruebasautomatizadas@uniandes.edu.co')
+      cy.get('input[name="identification"]').type(configJson.user)
       cy.wait(2000)
-      cy.get('input[name="password"]').type('pruebasautomatizadas')
+      cy.get('input[name="password"]').type(configJson.password)
       cy.wait(2000)
       cy.get('button[class="login gh-btn gh-btn-blue gh-btn-block gh-btn-icon ember-view"]').click()
       cy.wait(2000)
