@@ -3,6 +3,138 @@ const { assert } = require('console');
 const { reverse } = require('lodash');
 const expect = require('chai').expect;
 
+/* START CREAR PAGINA FUNCIONALIDAD */
+
+/* START Helpers for all Escenarios */
+Given, When('I navigate to page {kraken-string} {kraken-string}', async function (host, page) {
+    return await this.driver.url(host+page);
+});
+
+Given('I login with {kraken-string} {kraken-string}', async function (email, password) {
+    let elementEmail = await this.driver.$('.email.ember-text-field');
+    await elementEmail.setValue(email);
+    let elementPassword = await this.driver.$('.password.ember-text-field');
+    await elementPassword.setValue(password);
+    let elementButton = await this.driver.$('button.login');
+    return await elementButton.click();
+});
+
+When('I click pages', async function() {
+    let element = await this.driver.$("[href='#/pages/']");
+    return await element.click();
+});
+
+When, Then('I reload', async function () {
+    await this.deviceClient.browser.refresh();
+});
+/* END Helpers for all Escenarios */
+
+/* START Create a new page */
+
+When('I click filter type', async function() {
+    let element = await this.driver.$("div.gh-contentfilter-menu.gh-contentfilter-type");
+    return await element.click();
+});
+
+When('I click Draft type', async function() {
+    let element = await this.driver.$("div.ember-basic-dropdown-content.ember-power-select-dropdown ul.ember-power-select-options li:nth-child(2)");
+    return await element.click();
+});
+
+When('I click new page', async function() {
+    let element = await this.driver.$("[href='#/editor/page/']");
+    return await element.click();
+});
+
+When('I create a page with {kraken-string} {kraken-string}', async function(title, description) {
+    let elementTitle = await this.driver.$(".gh-editor-title.ember-text-area");
+    await elementTitle.click();
+    await elementTitle.setValue(title);
+    let elementDescription = await this.driver.$(".koenig-editor__editor-wrapper");
+    await elementDescription.click();
+    return await elementDescription.setValue(description);
+});
+
+When('I publish it now', async function() {
+    let elementPublishDropDown = await this.driver.$(".ember-view.ember-basic-dropdown-trigger.gh-btn.gh-btn-outline.gh-publishmenu-trigger");
+    await elementPublishDropDown.click();
+    let elementPublishButton = await this.driver.$(".gh-publishmenu-footer .gh-publishmenu-button");
+    return await elementPublishButton.click();
+});
+
+When('I publish it schedule', async function() {
+    let elementPublishDropDown = await this.driver.$(".ember-view.ember-basic-dropdown-trigger.gh-btn.gh-btn-outline.gh-publishmenu-trigger");
+    await elementPublishDropDown.click();
+    let elementSchedule = await this.driver.$(".gh-publishmenu-section div.gh-publishmenu-radio:nth-child(2) .gh-publishmenu-radio-content .gh-publishmenu-radio-label");
+    await elementSchedule.click();
+    let elementPublishButton = await this.driver.$(".gh-publishmenu-footer .gh-publishmenu-button");
+    return await elementPublishButton.click();
+});
+
+When('I get back to page list', async function() {
+    let elementbackButton = await this.driver.$("[href='#/pages/']");
+    return await elementbackButton.click();
+});
+/* END Create a new page */
+
+When('I edit the page with {kraken-string}', async function(newDescription) {
+    let elementDescription = await this.driver.$(".koenig-editor__editor-wrapper");
+    await elementDescription.click();
+    await elementDescription.setValue(' '+ newDescription);
+    let elementPublishDropDown = await this.driver.$(".ember-view.ember-basic-dropdown-trigger.gh-btn.gh-btn-outline.gh-publishmenu-trigger");
+    await elementPublishDropDown.click();
+    let elementPublishButton = await this.driver.$(".gh-publishmenu-footer .gh-publishmenu-button");
+    return await elementPublishButton.click();
+});
+
+When('I click page settings', async function() {
+    let element = await this.driver.$("button.post-settings");
+    return await element.click();
+});
+
+When('I click delete page', async function() {
+    let element = await this.driver.$("button.gh-btn-hover-red.settings-menu-delete-button");
+    return await element.click();
+});
+
+When('I click delete page modal', async function() {
+    let modalElement = await this.driver.$(".modal-content > .modal-footer > .gh-btn-red");
+    return await modalElement.click();
+});
+
+
+/* Check thens */
+Then('I check if the page was created with the name {kraken-string}', async function(title) {
+    let pageName = await this.driver.$("h1.post-full-title").getText();
+    return expect(pageName).to.equal(title);
+});
+
+Then('I check if the page was edited with {kraken-string}', async function(descriptionEdit) {
+    let pageName = await this.driver.$("div.post-content p").getText();
+    return expect(pageName).to.contain(descriptionEdit);
+});
+
+Then('I check if the page was deleted', async function() {
+    let pageName = await this.driver.$("p.error-description").getText();
+    return expect(pageName).to.contain('Page not found');
+});
+
+Then('I check if it is schedule', async function() {
+    let elementPublishDropDown = await this.driver.$(".ember-view.ember-basic-dropdown-trigger.gh-btn.gh-btn-outline.gh-publishmenu-trigger");
+    await elementPublishDropDown.click();
+    let pageName = await this.driver.$("header.gh-publishmenu-heading").getText();
+    return expect(pageName).to.contain('Will be published in');
+});
+
+Then('I check if Draft is first', async function() {
+    let draftTitle = await this.driver.$("main.gh-main section.content-list ol li:nth-child(2) h3.gh-content-entry-title").getText();
+    return expect(draftTitle).to.contain('draft');
+});
+
+/* /Check thens */
+
+/* END CREAR PAGINA FUNCIONALIDAD */
+
 When('I enter email {kraken-string}', async function (email) {
     let element = await this.driver.$('input[name="identification"]');
     return await element.setValue(email);
@@ -229,10 +361,6 @@ When('I click revoke', async function() {
     let element = await this.driver.$('a[href="#revoke"]');
     return await element.click();
 })
-
-When, Then('I reload', async function () {
-    await this.deviceClient.browser.refresh();
-});
 
 When('I click General', async function() {
     let element = await this.driver.$('a[href="#/settings/general/"]');
