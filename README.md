@@ -73,6 +73,7 @@ Desde la carpeta raiz del proyecto, `cypress_ghost`  :
 * En caso no instalarse, las dependencias son: 
  - Faker V7.6.0. Ejecutar en la terminal el comando `npm install @faker-js/faker --save-dev`
  - Chai V4.3.7. Ejecutar en la terminal el comando `npm install chai`
+* Desde la carpeta raiz del proyecto de cypresss, en el archivo `.\cypress-ghost\config\config.json` configurar host, user y password
 * Ejecutar el comando `cypress open` para abrir la consola de la aplicacion
 * En la consola Adicionar el proyecto. Buscar la carpeta cypress-ghost descargada del repositorio github
   <img width="938" alt="agregar proyecto" src="https://user-images.githubusercontent.com/124101392/236691524-aa3a4466-a381-4126-992b-d9f663863a85.png">
