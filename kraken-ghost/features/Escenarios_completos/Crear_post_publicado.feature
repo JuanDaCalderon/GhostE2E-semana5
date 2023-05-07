@@ -21,7 +21,7 @@ Scenario: Se crea un post - se publica - se valida que se encuentre en la lista 
     And I click in Cancel button
     And I wait for 2 seconds
     And I click in Posts
-    And I wait 2 seconds
+    And I wait for 2 seconds
 
     And I click published posts menu
     And I wait for 5 seconds

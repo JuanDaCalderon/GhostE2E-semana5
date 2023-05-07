@@ -211,6 +211,8 @@ When('I click confirmareliminaciontag', async function() {
 })
 
 
+/* START Posts steps */
+
 When('I click Posts menu', async function() {
     let element = await this.driver.$(".gh-nav-list-new > a[href='#/posts/']");
     return await element.click();
@@ -311,7 +313,19 @@ When('I delete the post', async function () {
     
 });
 
+/* START Thens POST */
 
+Then('I check Post with title {kraken-string} is in the list', async function (postTitle) {
+    let element = await this.driver.$(".//*//ol[contains(@class, 'posts-list')]//*//h3[text() = '" + postTitle + "']");
+    return expect(await element.isExisting()).to.be.true;
+});
+
+Then('I check Post with title {kraken-string} is not in the list', async function (postTitle) {
+    let element = await this.driver.$(".//*//ol[contains(@class, 'posts-list')]//*//h3[text() = '" + postTitle + "']");
+    return expect(await element.isExisting()).to.be.false;
+});
+
+/* END POST steps */
 
 When('I click staff', async function() {
     let element = await this.driver.$('a[href="#/staff/"]');
@@ -397,10 +411,7 @@ Then('I check Name with fullname {kraken-string} is in the list', async function
     return expect(await element.isExisting()).to.be.true;
 });
 
-Then('I check Post with title {kraken-string} is not in the list', async function (postTitle) {
-    let element = await this.driver.$(".//*//ol[contains(@class, 'posts-list')]//*//h3[text() = '" + postTitle + "']");
-    return expect(await element.isExisting()).to.be.false;
-});
+
 
 When('I click post-settings', async function() {
     let element = await this.driver.$('button[class="post-settings"]');
