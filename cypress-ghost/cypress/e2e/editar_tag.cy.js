@@ -1,6 +1,6 @@
 import configJson from '../../config/config.json';
 describe('Editar tag', () => {
-  it('Se crea un tag desde el inicio de sesión hasta la finalización de la creación', () => {
+  it('Se crea tag desde inicio de sesión hasta fin de la creación', () => {
     cy.visit(configJson.host)
     cy.wait(2000)
     cy.get('input[name="identification"]').type(configJson.user)
@@ -19,7 +19,7 @@ describe('Editar tag', () => {
     cy.wait(2000)
     cy.get('button[class="gh-btn gh-btn-blue gh-btn-icon ember-view"]').click()
     cy.wait(2000)
-    cy.get('a[href="#/tags/"][data-cypress-el="true"]').click()
+    cy.get('li:has(a[href="#/tags/"])').click()
     cy.wait(2000)
     cy.contains('h3', 'AAAAAAAAAA Tag prueba').click()
     cy.wait(2000)
