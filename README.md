@@ -23,21 +23,21 @@ https://github.com/JuanDaCalderon/GhostE2E-semana5
 1. Inicia sesion, crear un post y lo publica y valida que se adiciona a lista de post publicados.
 2. Inicia sesion, crear un post programado (scheduled) y valida que se adiciona a lista de post scheduled.
 3. Inicia sesion, crear un borrador de post y valida que se adiciona a lista de post scheduled.
-3. Inicia sesion, crear un post y lo publica, lo selecciona de lista de post, le modifica title y el texto secuandario y valida que este en la lista con los valores actualizados.
-4. Inicia sesion, crear un post y lo publica, lo selecciona de lista de post, lo elimina y valida que ya no este en el listado.
+4. Inicia sesion, crear un post y lo publica, lo selecciona de lista de post, le modifica title y el texto secuandario y valida que este en la lista con los valores actualizados.
+5. Inicia sesion, crear un post y lo publica, lo selecciona de lista de post, lo elimina y valida que ya no este en el listado.
 
-5. Crear page, Crea una página y la publica despues se valida que haya sido creada correctamente.
-6. Crear page programada, Crea una página y la programa, despues se valida que esta programada.
-7. Eliminar pagina, Se crea una página, se valida que se creo y despues se elimina, para por ultimo validar que se elimino.
-8. Editar page, Se crea una página y despues se edita la descripción de la misma.
-9. Filtrar pages, Se crean tres páginas; Publicada, Agendada, y en borrador, despues se filtrar por borradores y se valida que este filtrada.
+6. Crear page, Crea una página y la publica despues se valida que haya sido creada correctamente.
+7. Crear page programada, Crea una página y la programa, despues se valida que esta programada.
+8. Eliminar pagina, Se crea una página, se valida que se creo y despues se elimina, para por ultimo validar que se elimino.
+9. Editar page, Se crea una página y despues se edita la descripción de la misma.
+10. Filtrar pages, Se crean tres páginas; Publicada, Agendada, y en borrador, despues se filtrar por borradores y se valida que este filtrada.
 
-10. 
-11. 
-12. 
-13. 
-14. 
-15. 
+11. Iniciar sesión, crear tag y validar la correcta creación de este tag.
+12. Iniciar sesión, crear tag, validar la correcta creación, entrar al tag, editar el tag, guardar los cambios y validar la correcta ejecución del escenario.
+13. Iniciar sesión, crear tag, validar la correcta creación, entrar al tag, eliminar el tag y validar la correcta ejecución del escenario.
+14. Iniciar sesión, crear tag, validar la correcta creación, crear un post, entrar al post, asociar el tag y validar la correcta ejecución del escenario.
+15. Iniciar sesión, crear tag, validar la correcta creación, dar clic en la pestaña de internal tags y validar la correcta ejecución del escenario.
+
 16. inicia sesion, se va a la seccion de staff click en el boton "invite people" y se hace invitacion al usuario
 17. inicia sesion, se va a la seccion de staff click en el usuario y se edita la informacion del usuario
 18. inicia sesion, se va a la seccion de staff, se invita al usuario, se recarga la pagina y se da clik en el boton "Revoke" del usuario invitado
