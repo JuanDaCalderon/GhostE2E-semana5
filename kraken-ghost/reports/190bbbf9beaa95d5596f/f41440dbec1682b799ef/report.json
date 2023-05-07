@@ -1,0 +1,220 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "eliminar-page;como-usuario-externo-compruebo-que-la-página-fue-eliminada",
+        "keyword": "Scenario",
+        "line": 29,
+        "name": "Como usuario externo compruebo que la página fue eliminada",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 688000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 30,
+            "name": "I wait for a signal containing \"page created\" for 30 seconds",
+            "match": {
+              "location": "node_modules\\kraken-node\\lib\\steps\\both.js:109"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8063000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 31,
+            "name": "I navigate to page \"<host>\" \"<page_title_delete>\"",
+            "match": {
+              "location": "features\\web\\step_definitions\\step.js:9"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 3000000,
+              "error_message": "Error: no current window handle registered\n    at DevToolsDriver.getPageHandle (C:\\Users\\leo10\\OneDrive\\Documentos\\Uniandes\\Semestre1 Ciclo 2\\PruebasAutomatizadas\\GhostE2E-semana5\\kraken-ghost\\node_modules\\devtools\\build\\devtoolsdriver.js:192:19)\n    at DevToolsDriver.checkPendingNavigations (C:\\Users\\leo10\\OneDrive\\Documentos\\Uniandes\\Semestre1 Ciclo 2\\PruebasAutomatizadas\\GhostE2E-semana5\\kraken-ghost\\node_modules\\devtools\\build\\devtoolsdriver.js:205:25)\n    at Browser.wrappedCommand (C:\\Users\\leo10\\OneDrive\\Documentos\\Uniandes\\Semestre1 Ciclo 2\\PruebasAutomatizadas\\GhostE2E-semana5\\kraken-ghost\\node_modules\\devtools\\build\\devtoolsdriver.js:123:24)\n    at Browser.wrapCommandFn (C:\\Users\\leo10\\OneDrive\\Documentos\\Uniandes\\Semestre1 Ciclo 2\\PruebasAutomatizadas\\GhostE2E-semana5\\kraken-ghost\\node_modules\\@wdio\\utils\\build\\shim.js:137:38)\n    at Browser.<anonymous> (C:\\Users\\leo10\\OneDrive\\Documentos\\Uniandes\\Semestre1 Ciclo 2\\PruebasAutomatizadas\\GhostE2E-semana5\\kraken-ghost\\node_modules\\@wdio\\utils\\build\\shim.js:276:24)\n    at Browser.url (C:\\Users\\leo10\\OneDrive\\Documentos\\Uniandes\\Semestre1 Ciclo 2\\PruebasAutomatizadas\\GhostE2E-semana5\\kraken-ghost\\node_modules\\webdriverio\\build\\commands\\browser\\url.js:47:17)\n    at Browser.wrapCommandFn (C:\\Users\\leo10\\OneDrive\\Documentos\\Uniandes\\Semestre1 Ciclo 2\\PruebasAutomatizadas\\GhostE2E-semana5\\kraken-ghost\\node_modules\\@wdio\\utils\\build\\shim.js:137:38)\n    at Browser.<anonymous> (C:\\Users\\leo10\\OneDrive\\Documentos\\Uniandes\\Semestre1 Ciclo 2\\PruebasAutomatizadas\\GhostE2E-semana5\\kraken-ghost\\node_modules\\@wdio\\utils\\build\\shim.js:276:24)\n    at KrakenWorld.<anonymous> (C:\\Users\\leo10\\OneDrive\\Documentos\\Uniandes\\Semestre1 Ciclo 2\\PruebasAutomatizadas\\GhostE2E-semana5\\kraken-ghost\\features\\web\\step_definitions\\step.js:10:30)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "I wait for 1 seconds",
+            "match": {
+              "location": "node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "I check if the page was created with the name \"<page_title_delete>\"",
+            "match": {
+              "location": "features\\web\\step_definitions\\step.js:107"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "I wait for 1 seconds",
+            "match": {
+              "location": "node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "I send a signal to user 1 containing \"page created checked\"",
+            "match": {
+              "location": "node_modules\\kraken-node\\lib\\steps\\both.js:85"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "I wait for 1 seconds",
+            "match": {
+              "location": "node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "I wait for a signal containing \"page deleted\" for 30 seconds",
+            "match": {
+              "location": "node_modules\\kraken-node\\lib\\steps\\both.js:109"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "I wait for 1 seconds",
+            "match": {
+              "location": "node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 39,
+            "name": "I reload",
+            "match": {
+              "location": "features\\web\\step_definitions\\step.js:27"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "I wait for 1 seconds",
+            "match": {
+              "location": "node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "I check if the page was deleted",
+            "match": {
+              "location": "features\\web\\step_definitions\\step.js:117"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "I wait for 3 seconds",
+            "match": {
+              "location": "node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "failed",
+              "duration": 30006000000,
+              "error_message": "Error: function timed out, ensure the promise resolves within 30000 milliseconds\n    at Timeout._onTimeout (C:\\Users\\leo10\\OneDrive\\Documentos\\Uniandes\\Semestre1 Ciclo 2\\PruebasAutomatizadas\\GhostE2E-semana5\\kraken-ghost\\node_modules\\@cucumber\\cucumber\\lib\\user_code_runner.js:63:28)\n    at listOnTimeout (internal/timers.js:557:17)\n    at processTimers (internal/timers.js:500:7)"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user2",
+            "line": 28
+          },
+          {
+            "name": "@web",
+            "line": 28
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "eliminar-page",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Eliminar Page",
+    "tags": [],
+    "uri": "features\\eliminar_page.feature"
+  }
+]
