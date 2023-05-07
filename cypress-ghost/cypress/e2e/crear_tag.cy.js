@@ -13,7 +13,7 @@ describe('Crear tag', () => {
     cy.wait(2000)
     cy.get('a[href="#/tags/new/"]:first').click()
     cy.wait(2000)
-    cy.get('#tag-name').type('Tag')
+    cy.get('#tag-name').type('AAAAAAAAAA Tag prueba')
     cy.wait(2000)
     cy.get('#tag-description').type('Se crea un tag de prueba para validar la funcionalidad')
     cy.wait(2000)
@@ -21,6 +21,6 @@ describe('Crear tag', () => {
     cy.wait(2000)
     cy.get('a[href="#/tags/"][data-cypress-el="true"]').click()
     cy.wait(2000)
-    cy.get("h3.gh-tag-list-name").contains("Tag").should('exist');
+    cy.get("h3.gh-tag-list-name").contains("AAAAAAAAAA Tag prueba").should('exist');
   })
 })
