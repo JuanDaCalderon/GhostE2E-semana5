@@ -47,22 +47,21 @@ https://github.com/JuanDaCalderon/GhostE2E-semana5
 
 # Instrucciones para ejecutar tests - Kraken
 
-## Dependencias
-* Tener instalado Cypress V 12.9.0. Remitirse al tutorial del curso. https://thesoftwaredesignlab.github.io/AutTestingCodelabs/cypress-tutorial/index.html#0
-* Tener instalado Kraken . Remitir al tutorial del curso. https://thesoftwaredesignlab.github.io/AutTestingCodelabs/kraken-web-testing-tool/index.html#0
+## Dependencias globales
+* Tener instalado Cypress V12.9.0. Remitirse al tutorial del curso. https://thesoftwaredesignlab.github.io/AutTestingCodelabs/cypress-tutorial/index.html#0
+* Tener instalado Kraken. Remitir al tutorial del curso. https://thesoftwaredesignlab.github.io/AutTestingCodelabs/kraken-web-testing-tool/index.html#0
 * Tener instalado Ghost. Remitirse al tutorial del curso. https://thesoftwaredesignlab.github.io/AutTestingCodelabs/ghost-local-deployment/index.html#0
   Para Ghost se utilizo la version 3.41.1, en caso de utilizar docker, se puede utilizar la imagen ejecutando el siguiente comando docker pull ghost:3.41.1
-* Node V 14.21.3.
-* Faker V 7.6.0. Ejecutar en la terminal el siguiente comando `npm install @faker-js/faker --save-dev`
-* Chai V 4.3.7. Ejecutar en la terminal el siguiente comando.npm install chai 
+* Node V14.21.3.
+
 
 # Ejecución de las pruebas
 ## Kraken
 Desde la carpeta raiz del proyecto, `kraken_ghost`  :
 * Ejecutar el comando `npm install` para instalar las dependencias. 
 * En caso no instalarse, las dependencias son: 
- - Faker V 7.6.0. Ejecutar en la terminal el comando `npm install @faker-js/faker --save-dev`
- - Chai V 4.3.7. Ejecutar en la terminal el comando `npm install chai`
+ - Faker V7.6.0. Ejecutar en la terminal el comando `npm install @faker-js/faker --save-dev`
+ - Chai V4.3.7. Ejecutar en la terminal el comando `npm install chai`
 * Desde la raiz del proyecto, en el archivo `properties.json` configurar los valores para Usuario1 y Password1
 * En la carpeta `features\Escenarios_completos` se encuentran los archivos .feature correspondients a los casos de prueba.
 * Para su ejecucion, de la carpeta `features\Escenarios_completos` mover el escenario deseado.Debe ser el unico en esta ubicacion.
@@ -72,8 +71,8 @@ Desde la carpeta raiz del proyecto, `kraken_ghost`  :
 Desde la carpeta raiz del proyecto, `cypress_ghost`  :
 * Ejecutar el comando `npm install` para instalar las dependencias
 * En caso no instalarse, las dependencias son: 
- - Faker V 7.6.0. Ejecutar en la terminal el comando `npm install @faker-js/faker --save-dev`
- - Chai V 4.3.7. Ejecutar en la terminal el comando `npm install chai`
+ - Faker V7.6.0. Ejecutar en la terminal el comando `npm install @faker-js/faker --save-dev`
+ - Chai V4.3.7. Ejecutar en la terminal el comando `npm install chai`
 * Ejecutar el comando `cypress open` para abrir la consola de la aplicacion
 * En la consola Adicionar el proyecto. Buscar la carpeta cypress-ghost descargada del repositorio github
   <img width="938" alt="agregar proyecto" src="https://user-images.githubusercontent.com/124101392/236691524-aa3a4466-a381-4126-992b-d9f663863a85.png">
