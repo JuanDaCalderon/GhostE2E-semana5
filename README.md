@@ -83,9 +83,8 @@ Desde la carpeta raiz del proyecto, `cypress_ghost`  :
 * Seleccionar el navegador Chrome y hacer click en el boton Start E2E Testing in Chrome
 ![image](https://user-images.githubusercontent.com/124101392/236691553-aa01b58c-2099-47f2-8fbb-3ae422889d55.png)
 * En la ventana se mostraran los archivos correspondientes a los casos de prueba.
-![image](https://user-images.githubusercontent.com/124101392/236691640-35188333-fb58-4c41-8189-3d624f5a2e26.png)
-* Elegir el que se desee ejecutar
 ![image](https://user-images.githubusercontent.com/124101392/236692105-1516e344-7398-47a9-8896-c0a39a4433aa.png)
+* Elegir el que se desee ejecutar
 
 ## Pros y contras de las dos herramientas utilizadas
 
