@@ -1,8 +1,9 @@
 import { faker } from '@faker-js/faker';
+import configJson from '../../config/config.json'
 
 let postData = {
-    title: faker.name.findName(),
-    description: faker.name.findName()
+    title: faker.name.fullName(),
+    description: faker.name.fullName()
 }
 
 describe('Crear post programado', () => {
@@ -15,13 +16,13 @@ describe('Crear post programado', () => {
         cy.wait(5000)
       
         //When I enter email "<Usuario1>"
-        cy.get('#ember7').type('lacz83@hotmail.com')
+        cy.get('input[name="identification"]').type(configJson.user)
       
         //And I enter password "<Password1>"
-        cy.get('#ember10').type('Oracle6537')
+        cy.get('input[name="password"]').type(configJson.password)
       
         //And I click next
-        cy.get('#ember12').click()
+        cy.get('button[class="login gh-btn gh-btn-blue gh-btn-block gh-btn-icon ember-view"]').click()
         cy.wait(5000)
     
         //And I click Posts menu
@@ -32,13 +33,13 @@ describe('Crear post programado', () => {
         cy.get('.gh-nav-new-post').click();
         cy.wait(2000)
 
-        //And I write in post title "$name_1"
+        //And I write in post title "$dataPost.title" And I write in post description "$dataPost.description"
         cy.get('.gh-editor-title').type(postData.title);
         cy.get('.koenig-editor__editor').type(postData.description);
      
-        //And I click in Publish button And I wait for 6 seconds
+        //And I click in Publish button And I wait for 2 seconds
         cy.get('.gh-publishmenu').click();
-        cy.wait(6000);
+        cy.wait(2000);
 
         //And I click Schedule it for later And I wait for 2 seconds
         cy.get('.gh-publishmenu-radio').contains('Schedule it for later').click();
@@ -60,7 +61,7 @@ describe('Crear post programado', () => {
         cy.get("a[href='#/posts/?type=scheduled']").click();
         cy.wait(5000);
 
-        //Then I check Post with title "$$name_1" is in the list 
+        //Then I check Post with title "$$dataPost.title" is in the list 
         cy.get("h3.gh-content-entry-title").contains(postData.title).should('exist');
 
         });

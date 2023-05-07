@@ -1,10 +1,11 @@
 import { faker } from '@faker-js/faker';
+import configJson from '../../config/config.json'
 
 let postData = {
-    title_1: faker.name.findName(),
-    description_1: faker.name.findName(),
-    title_2: faker.name.findName(),
-    description_2: faker.name.findName()
+    title_1: faker.name.fullName(),
+    description_1: faker.name.fullName(),
+    title_2: faker.name.fullName(),
+    description_2: faker.name.fullName()
 }
 
 describe('Editar post ', () => {
@@ -16,15 +17,15 @@ describe('Editar post ', () => {
         cy.visit('http://localhost:2368/ghost')
         cy.wait(5000)
       
-        //When I enter email "<Usuario1>"
-        cy.get('#ember7').type('lacz83@hotmail.com')
+         //When I enter email "<Usuario1>"
+         cy.get('input[name="identification"').type(configJson.user)
       
-        //And I enter password "<Password1>"
-        cy.get('#ember10').type('Oracle6537')
-      
-        //And I click next
-        cy.get('#ember12').click()
-        cy.wait(5000)
+         //And I enter password "<Password1>"
+         cy.get('input[name="password"').type(configJson.password)
+       
+         //And I click next
+         cy.get('button[class="login gh-btn gh-btn-blue gh-btn-block gh-btn-icon ember-view"]').click()
+         cy.wait(5000)
     
         //And I click Posts menu
         cy.get(".gh-nav-list-new > a[href='#/posts/']").click();
@@ -34,13 +35,13 @@ describe('Editar post ', () => {
         cy.get('.gh-nav-new-post').click();
         cy.wait(2000)
 
-        //And I write in post title "$name_1" 
+        //And I write in post title An I write in post description  
         cy.get('.gh-editor-title').type(postData.title_1);
         cy.get('.koenig-editor__editor').type(postData.description_1);
      
-        //And I click in Publish And I wait for 6 seconds
+        //And I click in Publish And I wait for 2 seconds
         cy.get('.gh-publishmenu').click();
-        cy.wait(6000);
+        cy.wait(2000);
 
         //And I click publish button And I wait for 6 seconds
         cy.get('.gh-publishmenu-button').click();
@@ -48,7 +49,7 @@ describe('Editar post ', () => {
 
         //And I click in Cancel button And I wait for 2 seconds
         cy.get('.gh-btn.gh-btn-outline.gh-btn-link').click();
-        cy.wait(6000);
+        cy.wait(2000);
     
         //And I click in Posts And  I wait for 2 seconds
         cy.get('.blue.link.fw4.flex.items-center.ember-view').click();
@@ -58,16 +59,16 @@ describe('Editar post ', () => {
         cy.get("a[href='#/posts/?type=published']").click();
         cy.wait(5000);
 
-        //And I select the post with title "$$name_1" And I wait for 2 seconds
+        //And I select the post with title "$$postData.title_1" And I wait for 2 seconds
         cy.get("h3.gh-content-entry-title").contains(postData.title_1).click()
     
-        //And I write in post title "$name_2" And I Write in post text "$string_2"
+        //And I write in post title "$postData.title_2" And I Write in post text "$postData.description_2"
         cy.get('.gh-editor-title').clear().type(postData.title_2);
         cy.get('.koenig-editor__editor').clear().type(postData.description_2);
 
         //And I click in Publish And I wait for 2 seconds
         cy.get('.gh-publishmenu').click();
-        cy.wait(6000);
+        cy.wait(2000);
 
         //And I click in Publish button And I wait for 6 seconds
         cy.get('.gh-publishmenu-button').click();
@@ -75,13 +76,13 @@ describe('Editar post ', () => {
 
         //And I click in Cancel button And I wait for 2 seconds
         cy.get('.gh-btn.gh-btn-outline.gh-btn-link').click();
-        cy.wait(6000);
+        cy.wait(2000);
     
         //And I click in Posts
         cy.get('.blue.link.fw4.flex.items-center.ember-view').click();
         cy.wait(2000);
 
-        //Then I check Post with title "$$name_1" is in the list 
+        //Then I check Post with title "$$appData.titel_2" is in the list 
         cy.get("h3.gh-content-entry-title").contains(postData.title_2).should('exist');
 
         });
