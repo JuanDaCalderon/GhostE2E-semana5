@@ -73,15 +73,15 @@ Desde la carpeta raiz del proyecto, `cypress_ghost`  :
 - Ejecutar el comando `npm install` para instalar las dependencias
 - Ejecutar el comando `cypress open` para abrir la consola de la aplicacion
 - En la consola Adicionar el proyecto. Buscar la carpeta cypress-ghost descargada del repositorio github
-  image.png
+  <img width="938" alt="agregar proyecto" src="https://user-images.githubusercontent.com/124101392/236691524-aa3a4466-a381-4126-992b-d9f663863a85.png">
 - Ya se ve debe ver el proyecto, seleccionar cypress-ghost
-image.png
+
 - Seleccionar E2E testing
-image.png
+![image](https://user-images.githubusercontent.com/124101392/236691572-a8561b8a-e8e2-4aa6-b7ec-25a44f11a4de.png)
 - Seleccionar el navegador Chrome y hacer click en el boton Start E2E Testing in Chrome
-image.png
+![image](https://user-images.githubusercontent.com/124101392/236691553-aa01b58c-2099-47f2-8fbb-3ae422889d55.png)
 - En la ventana se mostraran los archivos correspondientes a los casos de prueba.
-image.png
+![image](https://user-images.githubusercontent.com/124101392/236691640-35188333-fb58-4c41-8189-3d624f5a2e26.png)
 - Elegir el que se desee ejecutar
 
 ## Pros y contras de las dos herramientas utilizadas
