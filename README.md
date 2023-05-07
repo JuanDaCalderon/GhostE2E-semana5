@@ -64,8 +64,8 @@ Desde la carpeta raiz del proyecto, `kraken_ghost`  :
  - Chai V4.3.7. Ejecutar en la terminal el comando `npm install chai`
 * Desde la raiz del proyecto, en el archivo `properties.json` configurar los valores para Usuario1 y Password1
 * En la carpeta `features\Escenarios_completos` se encuentran los archivos .feature correspondients a los casos de prueba.
-* Para su ejecucion, de la carpeta `features\Escenarios_completos` mover el escenario deseado.Debe ser el unico en esta ubicacion.
-* Desde la raiz del proyecto Kraken ejecutar el comando `./node_modules/kraken-node/bin/kraken-node`
+* Para su ejecucion, de la carpeta `features\Escenarios_completos` mover el escenario deseado a la carpeta `.\features\`. Debe ser el unico en esta ubicacion.
+* Desde la raiz del proyecto Kraken ejecutar el comando `./node_modules/kraken-node/bin/kraken-node run`
 
 ## Cypress
 Desde la carpeta raiz del proyecto, `cypress_ghost`  :
