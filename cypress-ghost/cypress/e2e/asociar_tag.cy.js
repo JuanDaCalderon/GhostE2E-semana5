@@ -11,7 +11,7 @@ describe('Asociar tag', () => {
       cy.wait(2000)
       cy.get('a[href="#/tags/"]').click()
       cy.wait(2000)
-      cy.get('a[href="#/tags/new/"]').click()
+      cy.get('a[href="#/tags/new/"]:first').click()
       cy.wait(2000)
       cy.get('#tag-name').type('Tag')
       cy.wait(2000)
