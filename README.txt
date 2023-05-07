@@ -6,6 +6,10 @@
 - Sneyder Amado 
 - Luis Alberto Cortes
 
+## URL repositorio github
+https://github.com/JuanDaCalderon/GhostE2E-semana5
+
+
 ## Funcionalidades cubiertas
 - Inicio de sesion.
 - Post.
@@ -60,65 +64,25 @@
 
 # Ejecución de las pruebas
 ##Kraken
-Desde la carpeta raiz del proyecto de Kraken ......   :
-En la carpeta features\Escenarios_completos se encuentran los archivos .feature correspondients a los casos de prueba.
-Para su ejecucion, de la carpeta features\Escenarios_completos mover el escenario deseado. 
-desde la raiz del proyecto Kraken ejecutar el comando ./node_modules/kraken-node/bin/kraken-node
+Desde la carpeta raiz del proyecto de Kraken_ghost  :
+- Ejecutar el comando npm install para instalar las dependencias
+- En la carpeta features\Escenarios_completos se encuentran los archivos .feature correspondients a los casos de prueba.
+- Para su ejecucion, de la carpeta features\Escenarios_completos mover el escenario deseado.Debe ser el unico en esta ubicacion.
+- Desde la raiz del proyecto Kraken ejecutar el comando ./node_modules/kraken-node/bin/kraken-node
 
 
 ##Cypress
-
-Abrir cypress con el comando cypress open
-
-
-```
-npm install
-```
-Una vez node instale todas las dependencias, ejecute el comando 
-```
-.node_modules/kraken-node/bin/kraken-node run
-```
-Verá que comienza la ejecución de las pruebas en Kraken. Tras la finalización de la ejecución, verá dentro de la carpeta `screenshots`, los pantallazos tomados por Kraken para cada uno de los pasos, en cada uno de los escenarios.
-
-## Comparación de screenshots
-Para comparar los screenshots generados en los escenarios de las dos versiones, ubíquese en el directorio `/resemble_compare`r Dentro del archivo `config.json` asegúrese que los valores de `v3Directory` y `v4Directory` coincidan con la ubicación de los screenshots que desea comparar (por defecto apuntan a la ubicación de los pantallazos generados por kraken para las dos versiones de ghost usadas); si no coinciden, modifíquelos para que sean coincidentes. Tras esto, ejecute en consola en consola los comandos:
-
-``` 
-npm install
-node index.js
-```
-Esto ejecutará resemble, y creará un reporte con las diferencias encontradas entre los pantallazos dentro de la carpeta results, en un subdirectorio creado según la fecha y hora de ejecución. Dentro del repositorio podrá encontrar el último reporte generado por el equipo tras ejecutar las pruebas (`resemble_comparer/results/2022-05-16T04.15.18.653Z/report.html`).
-
-![imagen](https://user-images.githubusercontent.com/98656893/168519574-3bac86ae-cc2f-40cd-86a0-e14a0fb18aec.png)
-
-# Instrucciones para ejecutar tests - Cypress
-
-[Intrucciones para ejecución con Cypress](https://github.com/miso-alejosaur/e2e-testing/wiki/Instrucciones-VRT-con-Cypress-y-Resemble.js)
-
-## Instalación - Versión de Ghost
-Para la creación de estos test, se usó la versión 4.42.0 de Ghost; para ejecutar esta versión, ubíquese mediante consola en el directorio donde tenga instalado Ghost, y ejecute los siguientes comandos:
-```
-ghost uninstall
-ghost install 4.42.0 -local
-```
-Cuando la instalación finalice, se iniciará la ejecución de Ghost en `http://localhost:2368`, en caso que inicie en otro puerto o dirección, modifiquelo en el archivo `kraken/3.42/properties.json o kraken/4.44/properties.json` según corresponda, en la propiedad HOST.
-## Configuración del sitio
-Ingrese a la url http://localhost:2368/ghost/ (si su instancia de Ghost se ejecutó en otro puerto, úselo); allí encontrará un formulario para crear un nuevo Sitio en ghost. En los campos "Site title" y "Full name" ingrese los datos que desee, en el campo "Email Address" ingrese `test@test.tt`, y en el campo "Password" ingrese `1234567890a.`. Estas son las credenciales configuradas en Cypress; en caso de configurar otra combinación de usuario y contraseña, será necesario que modifique estos datos en el archivo `/Cypress/cypress/resource/login.feature`.
-![imagen](https://user-images.githubusercontent.com/98656893/167307021-8f72da03-575a-4cdc-89a5-50dcf7e8a2eb.png)
-## Ejecución de las pruebas
-Una vez creado el sitio, ubíquese mediante consola en el directorio `/Cypress` (perteneciente a este repositorio), y allí ejecute el comando 
-```
-npm install
-```
-Una vez npm instale todas las dependencias, ejecute el comando 
-
-```
-npm run test
-```
-Verá que comienza la ejecución de las pruebas en Cypress.
-## Ubicación de los screenshots
-
-```
-e2e-testing/cypress/cypress/screenshots/resource
-```
-
+Desde la carpeta raiz del proyecto de Cypress_ghost  :
+- Ejecutar el comando <<npm install>> para instalar las dependencias
+- Ejecutar el comando <<cypress open>> para abrir la consola de la aplicacion
+- En la consolaAdicionar el proyecto. Buscar la carpeta cypress-ghost descargada del repositorio github
+image.png
+- Ya se ve debe ver el proyecto, seleccionar cypress-ghost
+image.png
+- Seleccionar E2E testing
+image.png
+- Seleccionar el navegador Chrome y hacer click en el boton Start E2E Testing in Chrome
+image.png
+- En la ventana se mostraran los archivos correspondientes a los casos de prueba.
+image.png
+- Elegir el que se desee ejecutar
