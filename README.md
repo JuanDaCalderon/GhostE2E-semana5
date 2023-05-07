@@ -96,5 +96,5 @@ Desde la carpeta raiz del proyecto, `cypress_ghost`  :
 ||Posee una consola que permite hacer la inclusion de la carpeta del proyecto, la seleccion del navegador, elegir el tipo de prueba y seleccionar el escenario de prueba de manera grafica 
 | Kraken      | Permite simular de interaccion de mas de un usuario  | Requiere la instalacion de aplicaciones adicionales como Android studio para su funcionamiento que hace que se mas compleja puesta en ejecucion |
 ||La inclusion del patron GivenWhenThen mediante el archivo .feature que permite el entedimiento de manera intuitiva por alguien que no este familiarizado con la programacion|No genera video de la ejecuion de las pruebas|
-||La reutilizacion de codigo al hacer uso de steps que se puedne llamar multiples de manera facil |
+||La reutilizacion de codigo al hacer uso de steps que se pueden llamar multiples veces de manera facil |
 ||Los reportes generados son amigables y entendibles|
