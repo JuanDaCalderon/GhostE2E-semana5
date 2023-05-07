@@ -19,7 +19,7 @@ describe('Eliminar tag', () => {
       cy.wait(2000)
       cy.get('button[class="gh-btn gh-btn-blue gh-btn-icon ember-view"]').click()
       cy.wait(2000)
-      cy.get('a[href="#/tags/"]').click()
+      cy.get('li:has(a[href="#/tags/"])').click()
       cy.wait(2000)
       cy.get("h3.gh-tag-list-name").contains("AAAAAAAAAA Tag prueba").should('exist');
       cy.wait(2000)
