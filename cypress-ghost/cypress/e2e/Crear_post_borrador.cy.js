@@ -12,7 +12,7 @@ describe('Crear post borrador', () => {
     it('Se crea un post borrador - se valida que este en la lista', () => {
       
         //Given I navigate to page "http://localhost:2368/ghost"  
-        cy.visit('http://localhost:2368/ghost')
+        cy.visit(configJson.host)
         cy.wait(5000)
       
         //When I enter email "<Usuario1>"

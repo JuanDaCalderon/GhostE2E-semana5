@@ -1,6 +1,6 @@
 describe('Ver internal tags', () => {
     it('Se revisar la pestaña internal tags desde el inicio de sesión hasta la finalización de la creación', () => {
-      cy.visit('http://localhost:2368/ghost')
+      cy.visit(configJson.host)
       cy.wait(2000)
       cy.get('input[name="identification"]').type(configJson.user)
       cy.wait(2000)

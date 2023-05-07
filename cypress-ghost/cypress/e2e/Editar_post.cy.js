@@ -14,7 +14,7 @@ describe('Editar post ', () => {
     it('Se crea un post publicado - Actualiza title y descripcion - Valida que este en la lista con los valores actualizados', () => {
       
         //Given I navigate to page "http://localhost:2368/ghost"  
-        cy.visit('http://localhost:2368/ghost')
+        cy.visit(configJson.host)
         cy.wait(5000)
       
          //When I enter email "<Usuario1>"

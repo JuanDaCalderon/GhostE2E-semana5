@@ -1,6 +1,6 @@
 describe('Eliminar tag', () => {
     it('Se elimina un tag desde el inicio de sesión hasta la finalización de la eliminación', () => {
-      cy.visit('http://localhost:2368/ghost')
+      cy.visit(configJson.host)
       cy.wait(2000)
       cy.get('input[name="identification"]').type(configJson.user)
       cy.wait(2000)
